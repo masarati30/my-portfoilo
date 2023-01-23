@@ -384,6 +384,8 @@ nav .fa-solid{
         width: 100%;
     }
     #abt{
+        margin-right: 350px;
+        font-weight: 600;
         font-size: 40px;
         width: 100%
     }
