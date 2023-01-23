@@ -16,23 +16,23 @@ function opentab(tabname){
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu(){
-  sidemenu.style.right = "0"
+  sidemenu.style.right = "0";
 }
 function closemenu(){
-  sidemenu.style.right = "-200px"
+  sidemenu.style.right = "-200px";
 }
 // ------Scroll behaviour-----
 var navlinks = document.getElementsByClassName('nav-link');
 var navcontent = document.getElementsByClassName('nav-content');
 
 function scrollY(navname) {
-  for (navlink of navlinks)
+  for (navlink of navlinks);
 }
 
 // --------contact form-------
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxOXHpvQcz7M-UcxykKUsDrepnfYFuIOysgeTvLr6Mbo_SGxwSW8kE7uUNNw4Gulf6W/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
 
 form.addEventListener('submit', e => {
   e.preventDefault()
