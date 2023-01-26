@@ -344,16 +344,7 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
-    #hero{
-        background-image: url('lanp1.jpg');
-    }
-    #hero-masa{
-        margin-top: 100%;
-        font-size: 25px;
-    }
-    .light{
-        font-size: 30px;
-    }
+    /* -------------Navgation Bar------------ */
     nav .fa-solid{
         display: block;
         font-size: 25px;
@@ -383,11 +374,23 @@ nav .fa-solid{
     .btn.btn2{
         width: 100%;
     }
+
+    /* ------------Hero page----section 1--------- */
+
+    #hero{
+        background-image: url('lanp1.jpg');
+    }
+    #hero-masa{
+        margin-top: 100%;
+        font-size: 25px;
+    }
+    .light{
+        font-size: 30px;
+    }
+    /* ----------About Me-----section 3----------- */
     #abt{
-        margin-right: 350px;
-        font-weight: 600;
         font-size: 40px;
-        width: 100%
+        width: 70%;
     }
     #about-1{
         flex-basis: 90%;
@@ -402,6 +405,7 @@ nav .fa-solid{
         font-size: 16px;
         margin-right: 20px;
     }
+    /* -----------Contact me----section 4------------- */
     .contact-right, .contact-left{
         flex-basis: 100%;
     }
