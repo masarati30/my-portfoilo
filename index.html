@@ -11,18 +11,17 @@
 
   <link rel="stylesheet" href="myweb.css"/>
   <title>My Website</title>
-
+  
   <script src="https://kit.fontawesome.com/1c8247bb1b.js" crossorigin="anonymous"></script>
+  
 </head>
 <body style="background-color: #070708; color: #fff;">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark pt-3" 
-  position: sticky; 
-  top: 90; 
-  left: 0;">
+  style="position: sticky; top: 90; left: 0;">
   <div class="container">
     <a class="navbar-brand"href="#" style="font-family: cursive;" id="logo">MWeb
     <span>Logo<span> </a>
-    <div class="justify-content-center">
+    <div class="justify-content-center" id="header">
       <ul class="navbar-nav  mb-3 mb-lg-0" id="sidemenu">
         <li class="nav-item">
           <a class="nav-link active px-4" onclick="scrollY ('hero')"  href="#hero">Home</a>
@@ -186,8 +185,58 @@
   </div>
 </section>
 
+<script>
+  // ---------About Me---------
+var tablinks = document.getElementsByClassName('tab-links');
+var tabcontents = document.getElementsByClassName('tab-contents');
 
-<script src="web.js"></script>
+function opentab(tabname){
+  for (tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for (tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+// -------nav sidemenu------
+var sidemenu = document.getElementById("sidemenu");
 
+function openmenu(){
+  sidemenu.style.right = "0";
+}
+function closemenu(){
+  sidemenu.style.right = "-200px";
+}
+// ------Scroll behaviour-----
+var navlinks = document.getElementsByClassName('nav-link');
+var navcontent = document.getElementsByClassName('nav-content');
+
+function scrollY(navname) {
+  for (navlink of navlinks);
+}
+
+// --------contact form-------
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxOXHpvQcz7M-UcxykKUsDrepnfYFuIOysgeTvLr6Mbo_SGxwSW8kE7uUNNw4Gulf6W/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.innerHTML = "Message sucessfully sent"
+      setTimeout(function()  {
+        msg.innerHTML = ""
+      }, 5000);
+      form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+// Navgation item
+let header = doucument.getElementById(header);
+let btns = header.getElementsByClassName(nav-item);
+</script>
 </body>
 </html>
